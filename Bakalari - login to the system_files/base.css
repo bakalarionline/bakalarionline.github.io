@@ -1,0 +1,27 @@
+/* Basic settings */
+html, body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+.center {
+	text-align: center;
+}
+
+._scroll_padding {
+    width:18px;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.flex--column {
+    flex-direction: column !important;
+}
+
+.margin-10-0 {
+    margin: 10px 0px !important;
+}

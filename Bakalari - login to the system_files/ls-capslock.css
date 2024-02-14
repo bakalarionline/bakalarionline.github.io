@@ -1,0 +1,28 @@
+.ls-capslock {
+    position: relative !important;
+}
+
+.ls-capslock-active {
+    border-color: #C20E1A;
+    /*box-shadow: 0 1px 1px rgba(255, 179, 179, 0.5) inset, 0 0 8px rgba(255, 179, 179, 1);*/
+    outline: 0 none;
+    -webkit-box-shadow: 0px 0px 3px rgba(194, 14, 26, 0.75);
+    -moz-box-shadow: 0px 0px 3px rgba(194, 14, 26, 0.75);
+    box-shadow: 0px 0px 3px rgba(194, 14, 26, 0.75);
+}
+
+.ls-capslock-message {
+    /*font-family: Arial, Verdana, sans-serif;*/
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    color: #C20E1A;
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+.ls-capslock-message-showed {
+    display: inherit;
+}

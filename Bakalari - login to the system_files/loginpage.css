@@ -1,0 +1,766 @@
+/* Body basic settings */
+body {
+    height: 100%;
+    width: 100%;
+    color: #566971;
+    font-family: Source Sans Pro;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.question-container {
+    position: relative;
+}
+
+    .question-container .ico32-menu-napoveda {
+        position: absolute;
+        top: 3px;
+        right: 15px;
+        font-size: 25px;
+        color: #fff;
+        background-color: #00a2e2;
+        clip-path: inset(20% round 10px);
+    }
+
+.login-popup .block-style {
+    text-align: center;
+    width: 100%;
+}
+
+    .login-popup .block-style.title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .login-popup .block-style.info {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .login-popup .block-style.help {
+        min-width: 224px;
+        padding: 8px 2px
+    }
+
+    .login-popup .block-style.bottom {
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+.login-popup#info_popUp {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bk-login-schoolName {
+    font-size: 17px;
+    color: #555555;
+    text-align: center;
+    font-weight: 500;
+    margin: 35px 0px 20px 0px;
+}
+
+/* wrappery */
+#outer {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/shared/baka-webapp-bg-min.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+}
+
+    #outer[id] {
+        display: table;
+        position: static;
+        user-select: none;
+    }
+
+    /* for quirk explorer only*/
+
+    #middle[id] {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        position: relative;
+        padding: 20px 0px;
+    }
+
+/* for quirk explorer only */
+
+#inner {
+    width: 324px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Bakalari logo */
+img#loginLogo {
+    height: 63px;
+    margin-bottom: 10px;
+}
+
+/* White box */
+#loginBox {
+    background: rgba(255, 255, 255, .9);
+    padding-bottom: 20px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20);
+}
+
+/* blue info */
+#info {
+    height: 16px;
+    width: 16px;
+    background: #00a2e2;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+    #info:hover {
+        background-color: #0090C9;
+    }
+
+#labelH1,
+.label-h1 {
+    font-size: 26px;
+    color: #555555;
+    font-weight: 200;
+    cursor: default;
+}
+
+h2.label-h1 {
+    font-weight: 300;
+}
+
+.inputlabel {
+    text-align: left;
+    padding: 0px 0px 2px 42px !important;
+    font-size: 14px;
+    display: block;
+}
+
+.space-top-40 {
+    padding-top: 40px;
+}
+
+.stay-logged-in {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    display: inline-block;
+}
+
+    .stay-logged-in > span {
+        margin-left: 5px;
+        line-height: 22px;
+    }
+
+#loginBox a.forgotten-password {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    text-decoration: underline;
+    margin: 0;
+    margin-left: auto;
+}
+
+#loginBox a.forgotten-password:focus {
+    outline: none;
+}
+
+h1 {
+    padding-top: 31px;
+    padding-bottom: 22px;
+    font-weight: 300;
+    font-size: 26px;
+    color: #566971;
+    margin: 0px;
+}
+
+/* Design form fields */
+.inputLogin, button {
+    margin: 0 auto;
+    background: #F7F7F7;
+    color: #70706E;
+    border: 1px solid #AFAFAF;
+    width: 222px;
+    padding: 0px 8px;
+    margin-bottom: 16px;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.inputLogin {
+    border-radius: 3px;
+    border: 1px solid #ABB9BF;
+    background: #fff;
+    height: 30px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #566971;
+}
+
+    .inputLogin:focus {
+        border-color: #00a2e2;
+        box-shadow: 0 0 0 3px rgba(0,162,226,0.15);
+        outline: none;
+        color: #0090C9;
+    }
+
+/** Oddìlený zápis placeholderu pro jednotlivé prohlížeèe, v jednotném nefungují **/
+input.inputLogin::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #ABB9BF;
+    letter-spacing: -0.09px;
+    font-style: italic;
+}
+
+input.inputLogin::-moz-placeholder {
+    font-size: 14px;
+    color: #ABB9BF;
+    letter-spacing: -0.09px;
+    font-style: italic;
+}
+
+input.inputLogin:-ms-input-placeholder {
+    font-size: 14px;
+    color: #ABB9BF;
+    letter-spacing: -0.09px;
+    font-style: italic;
+}
+
+.inputName {
+    margin-bottom: 5px !important;
+}
+
+/* Change cursor */
+button {
+    cursor: pointer;
+}
+
+.labelToLeft {
+    float: left;
+    clear: left;
+    margin-left: 42px;
+}
+
+/* Send form button */
+.btn-login, .btn-connect {
+    width: 238px;
+    height: 40px;
+    background: linear-gradient(-180deg, #70E617 0%, #57BA0C 93%);
+    border: 1px solid #68BF27;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: Source Sans Pro;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+    .btn-login:hover, .btn-connect:hover {
+        background: #398A25;
+        border-color: #398A25;
+    }
+
+    .btn-login:focus, .btn-connect:focus {
+        border-color: #43A22B;
+        box-shadow: 0 0 0 3px rgba(67, 162, 43,0.15);
+        outline: none;
+    }
+
+    .btn-login:active, .btn-connect:active {
+        background: #2F701E;
+        border-color: #2F701E;
+    }
+
+    .btn-login:disabled {
+        cursor: default;
+        pointer-events: none;
+        background: #398A25;
+        border-color: #398A25;
+    }
+
+    .btn-login .btn-login-loader {
+        display: none;
+    }
+
+    .btn-login .btn-login-loader i {
+        margin-right: 10px;
+    }
+
+    .separator {
+        display: inline-flex;
+        align-items: center;
+        margin: 0px 0px 18px 0px;
+    }
+
+    .separator > span:not(.bk-separator) {
+        font-size: 12px;
+        letter-spacing: 0px;
+        line-height: 14px;
+        color: #ABB9BF;
+        margin: 0 10px;
+    }
+
+    .separator .bk-separator {
+        width: 74px;
+        height: 1px;
+        background: #E6EEF1;
+    }
+
+/* Okno s informací, napø. po odhlášení */
+
+.bk-infoPanel {
+    width: 240px;
+    height: 68px;
+    color: #fff;
+    border-radius: 3px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+    .bk-infoPanel.error {
+        background-color: #c20e1a;
+    }
+
+    .bk-infoPanel.success {
+        background-color: #398A25;
+    }
+
+    .bk-infoPanel .bk-infoPanel-icon {
+        font-size: 32px;
+        float: left;
+        margin: 8px;
+    }
+
+    .bk-infoPanel .bk-infoPanel-text {
+        color: #fff;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: left;
+        float: right;
+        margin-top: 18px;
+    }
+
+#labelpersistent {
+    padding-top: 1px;
+    margin: 0;
+    line-height: 18px;
+}
+
+#loginBox a#forgotlink {
+    margin: 0;
+    font-size: 12px;
+    line-height: 21px;
+    text-decoration: underline;
+}
+
+/* Zapomenute heslo */
+#loginBox a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #70706E;
+    text-decoration: none;
+    margin-top: 25px;
+}
+
+    #loginBox a:hover {
+        text-decoration: underline;
+    }
+
+/* Base for label styling */
+label {
+    font-weight: 400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-top: 10px;
+}
+
+/* Checkboxes */
+.checkbox-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 240px;
+    margin-bottom: 30px;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+        position: relative;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+
+        [type="checkbox"]:not(:checked) + label:hover:before {
+            border: 2px solid #0090C9;
+        }
+
+        [type="checkbox"]:not(:checked) + label:active:before {
+            border: 2px solid #007EB0;
+        }
+
+        [type="checkbox"]:not(:checked) + label:focus:before,
+        [type="checkbox"]:checked + label:focus:before {
+            border: 2px solid #0090C9;
+            box-shadow: 0 0 0 3px rgba(0,162,226,0.15);
+        }
+
+        [type="checkbox"]:not(:checked) + label:before,
+        [type="checkbox"]:checked + label:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #00a2e2;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+
+        [type="checkbox"]:checked + label:before {
+            border: 1px solid transparent;
+        }
+
+        [type="checkbox"]:checked + label:hover:before {
+            background: #0090C9;
+        }
+
+        [type="checkbox"]:checked + label:active:before {
+            background: #007EB0;
+        }
+
+        [type="checkbox"]:checked + label:after {
+            content: url(../images/shared/checkbox-ano-blue.png);
+            position: absolute;
+            top: 4px;
+            left: 0px;
+            height: 18px;
+            width: 18px;
+        }
+
+        [type="checkbox"]:checked + label:hover:after,
+        [type="checkbox"]:checked + label:active:after {
+            content: url(../images/shared/checkbox-ano-white.png);
+        }
+
+/* Bad username or pass */
+.chyba {
+    color: rgb(194,14,26);
+    margin-bottom: 5px;
+}
+
+    .chyba #cphmain_labelerror {
+        color: rgb(194,14,26);
+    }
+
+/* Alerts messages */
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    max-width: 500px;
+    margin: 10px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 0px;
+    top: 25px;
+}
+
+    .alert .alert-link {
+        font-weight: 700;
+    }
+/* Red message box */
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+    .alert-danger .alert-link {
+        color: #843534;
+    }
+
+.both {
+    clear: both;
+}
+
+/** Tlaèítko rozpojit **/
+.btn-disconnect {
+    color: #fff;
+    border-radius: 3px;
+    background: linear-gradient(-180deg, #DB0F1D 0%, #C20E1A 93%);
+    background: -o-linear-gradient(-180deg, #DB0F1D 0%, #C20E1A 93%);
+    background: -moz-linear-gradient(-180deg, #DB0F1D 0%, #C20E1A 93%);
+    border: 1px solid #C20E1A;
+    width: 238px;
+    height: 32px;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: Source Sans Pro;
+}
+
+    .btn-disconnect:hover {
+        background: #C20E1A;
+    }
+
+    .btn-disconnect:active {
+        background: #A80C16;
+    }
+
+    .btn-disconnect:focus {
+        border-color: #DB0F1D;
+        box-shadow: 0 0 0 3px rgba(219, 15, 29, 0.15);
+        outline: none;
+    }
+
+.btn-mslogin {
+    background: #00adef;
+    border-radius: 3px;
+    border: 1px solid #0087bd;
+    color: #fff;
+    width: 238px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    font-family: Source Sans Pro;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+    .btn-mslogin:hover {
+        background: #0090C9;
+        text-decoration: none;
+    }
+
+    #MSLoginDiv .btn-mslogin:active {
+        background: #007EB0;
+        text-decoration: none;
+    }
+
+.btn-mslogin:focus {
+    border-color: #00adef;
+    box-shadow: 0 0 0 3px rgba(0, 173, 239, 0.15);
+    outline: none;
+}
+
+.btn-mslogin > span.fa-windows {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.no-titlebar .ui-dialog-titlebar {
+    display: none;
+}
+
+.btn-mslogin:disabled,
+.btn-connect:disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
+/** Odkazy na mobilní aplikace **/
+.mobile-app {
+    margin-top: 30px;
+}
+
+.mobile-app-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #555555;
+}
+
+.mobile-app-img {
+    margin-top: 10px;
+}
+
+    .mobile-app-img > a > img:first-child {
+        margin-right: 10px;
+    }
+
+    .mobile-app-img > a > img:last-child {
+        margin-left: 10px;
+    }
+
+    .error-info img {
+        margin-bottom: 30px;
+    }
+
+.error-info #loginBox {
+    padding: 15px 5px;
+}
+
+    .error-info #loginBox #panelerror {
+        margin: 0 auto;
+        display: inline-table;
+    }
+
+        .error-info #loginBox #panelerror > div {
+            display: inline-block;
+        }
+
+        .error-info #loginBox #panelerror .chyba {
+            color: #C20E1A;
+            font-size: 13px;
+            text-align: center;
+            margin: 15px 0px;
+        }
+
+        .error-info #loginBox #panelerror .btn-again {
+            background: #00a2e2;
+            border-radius: 3px;
+            border: 1px solid #0087bd;
+            color: #fff;
+            width: 240px;
+            height: 34px;
+            -webkit-box-shadow: 0px 0px 4px 0px #0090C9;
+            -moz-box-shadow: 0px 0px 4px 0px #0090C9;
+            box-shadow: 0px 0px 4px 0px #0090C9;
+            font-size: 13px;
+            padding: 5px 15px;
+        }
+
+            .error-info #loginBox #panelerror .btn-again:hover {
+                background: #0090C9;
+                text-decoration: none;
+            }
+
+.general-warning {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: initial;
+    position: absolute;
+    display: block;
+    z-index: 999;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: #a80c16;
+    background-color: rgba(219, 15, 29, .4);
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+    .general-warning a.warning-link {
+        font-size: 13px;
+        color: #A80C16;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+
+    .general-warning.visible ~ #inner {
+        padding-top: 30px;
+    }
+
+@media all and (max-width: 600px) {
+    .general-warning.visible ~ #inner {
+        padding-top: 60px;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 668px), screen and (max-height: 560px) {
+
+    #inner {
+        width: 308px !important;
+    }
+
+    .alert {
+        width: 85%;
+    }
+
+    input {
+        border-radius: 0px;
+    }
+
+    .labelToLeft {
+        margin-left: 34px;
+    }
+}
+
+/* Mobilní zobrazení */
+@media (max-width: 640px) {
+
+    #middle {
+        background: rgba(255, 255, 255, .5);
+    }
+
+    #inner {
+        width: 100% !important;
+        position: static;
+    }
+
+    img#loginLogo {
+        margin-top: 50px;
+    }
+
+    .inputLogin {
+        display: block;
+    }
+
+    .btn-login {
+        display: inline-block;
+    }
+
+    .separator > span {
+        left: 49px;
+    }
+
+    #MSLoginDiv {
+        width: 240px;
+        margin: 0 auto;
+    }
+
+    #loginBox {
+        background: none;
+        position: static;
+        box-shadow: none;
+    }
+
+    .bk-login-schoolName {
+        margin: 30px 25px 15px 25px;
+    }
+
+        #loginBox > h1 {
+            display: none;
+        }
+
+    .checkbox-wrap .labelToLeft {
+        margin-left: 0;
+    }
+
+    #loginBox a#forgotlink {
+        margin-right: 0;
+    }
+}

